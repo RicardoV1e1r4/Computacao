@@ -32,7 +32,7 @@ Nesta lista são utilizados principalmente:
 |------|-----------|----------|
 | `int` | Números inteiros | idade, quantidade |
 | `float` | Números reais | média, temperatura, preço |
-| 'char' | Caractere | k, v, a |
+| `char` | Caractere | a, b, c, k, v |
 
 ### Exemplo
 

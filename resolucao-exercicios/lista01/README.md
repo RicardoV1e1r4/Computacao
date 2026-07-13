@@ -184,7 +184,7 @@ resultado = media(7.5, 8.0);
 ---
 
 ## Entrada e Saída de Dados
-
+### printf()
 Nesta lista, a principal função utilizada para exibir informações é `printf()`.
 
 ### Exemplo
@@ -198,7 +198,40 @@ Saída:
 ```
 Media = 7.75
 ```
+### scanf()
+A função scanf() é utilizada na linguagem C para a entrada de dados via teclado. Ela permite que o programa obtenha valores fornecidos pelo usuário e os armazene em variáveis para processamento posterior.
+Como a função funciona:
+1. Biblioteca: Para utilizá-la, é necessário incluir a diretiva #include <stdio.h> no início do programa.
+2. Sintaxe: A forma geral da função é: scanf("formatos", &variável1, &variável2, ...);
+3. Formatos (Especificadores): O primeiro argumento é uma string que define o tipo de dado que se espera ler. Os especificadores mais comuns são:
+- %d: Para números inteiros (int).
+- %f: Para números reais (float ou double).
+- %c: Para um único caractere (char).
+- %s: Para cadeias de caracteres (strings).
+4. O Operador de Endereço (&): Com exceção de vetores e strings, deve-se colocar o símbolo & antes do nome da variável. Esse operador indica o endereço de memória onde o dado lido será guardado. Esquecer o & geralmente causa erros de execução, como falhas de segmentação.
+5. Interação: Quando o programa executa o scanf(), ele interrompe a execução e aguarda que o usuário digite o valor e pressione a tecla Enter.
+  
+Exemplo Prático:
+O exemplo abaixo (baseado nos materiais das aulas 07 e 08) demonstra como ler um número inteiro e exibi-lo:
+#include <stdio.h>
+```
+int main() {
+    int num; // Declaração da variável para armazenar o dado [14]
 
+    printf("Digite um numero inteiro: "); // Prompt para o usuário [4]
+    
+    // O scanf lê o valor digitado e o guarda no endereço da variável 'num'
+    scanf("%d", &num); // %d indica um inteiro e &num indica o local na memória [2, 15]
+
+    printf("O numero que voce digitou foi: %d\n", num); // Exibe o resultado [15]
+
+    return 0;
+}
+```
+Observações importantes:
+Múltiplas entradas: É possível ler vários valores em um único comando, como scanf("%d %d", &a, &b).
+Limitação do %s: Ao ler strings com %s, a função para de ler no primeiro espaço em branco (espaço, tabulação ou nova linha).
+Caractere %c: Diferente de outros formatos, o %c captura "caracteres brancos" (como o Enter de uma leitura anterior). Para evitar isso, costuma-se colocar um espaço antes do formato: scanf(" %c", &letra).
 ---
 
 ## Programas Compostos por Funções
@@ -241,20 +274,7 @@ Cada arquivo contém a solução correspondente a um exercício da lista.
 
 ---
 
-# Competências desenvolvidas
 
-Ao resolver esta lista foram praticados conceitos importantes da programação estruturada, como:
-
-- declaração de variáveis;
-- manipulação de tipos de dados;
-- operadores aritméticos;
-- modularização;
-- reutilização de código;
-- passagem de parâmetros;
-- retorno de funções;
-- organização de programas em C.
-
-Esses conceitos constituem a base para o estudo de estruturas condicionais, laços de repetição, vetores, matrizes e estruturas de dados que serão abordados nas próximas listas.
 
 ---
 

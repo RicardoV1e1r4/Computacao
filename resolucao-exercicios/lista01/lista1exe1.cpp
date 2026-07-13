@@ -8,20 +8,26 @@ números.
 int funcaoSoma(int n1, int n2);
 
 int main(){
-	setlocale(LC_ALL, "Portuguese")
+	setlocale(LC_ALL, "Portuguese");
 	
-	int num1, num2;
-	printf("Soma de dois números inteiros \n Digite o primeiro número: ");
-	scanf("%d", num1);
-	printf("Digite o segundo número: ");
-	scanf("%d");
+	int num1, num2, result;
+	
+	printf("Soma de dois números inteiros\n");
+	printf("\nDigite o primeiro número: ");
+	scanf("%d", &num1);
+	printf("\nDigite o segundo número: ");
+	scanf("%d", &num2);
+	
+	result = funcaoSoma(num1, num2);
 	
 	return 0;
 }
 
 int funcaoSoma(int n1, int n2){
-	soma = n1 + n2
-	printf("O resultado da soma %d + %d é igual a %d", n1, n2, soma);
+	int soma;
+	
+	soma = n1 + n2;
+	printf("\nO resultado da soma %d + %d é igual a %d", n1, n2, soma);
 	
 	return soma;
 }

@@ -204,17 +204,17 @@ Como a função funciona:
 1. Biblioteca: Para utilizá-la, é necessário incluir a diretiva #include <stdio.h> no início do programa.
 2. Sintaxe: A forma geral da função é: scanf("formatos", &variável1, &variável2, ...);
 3. Formatos (Especificadores): O primeiro argumento é uma string que define o tipo de dado que se espera ler. Os especificadores mais comuns são:
-- %d: Para números inteiros (int).
-- %f: Para números reais (float ou double).
-- %c: Para um único caractere (char).
-- %s: Para cadeias de caracteres (strings).
+    - %d: Para números inteiros (int).
+    - %f: Para números reais (float ou double).
+    - %c: Para um único caractere (char).
+    - %s: Para cadeias de caracteres (strings).
 4. O Operador de Endereço (&): Com exceção de vetores e strings, deve-se colocar o símbolo & antes do nome da variável. Esse operador indica o endereço de memória onde o dado lido será guardado. Esquecer o & geralmente causa erros de execução, como falhas de segmentação.
 5. Interação: Quando o programa executa o scanf(), ele interrompe a execução e aguarda que o usuário digite o valor e pressione a tecla Enter.
   
 Exemplo Prático:
 O exemplo abaixo (baseado nos materiais das aulas 07 e 08) demonstra como ler um número inteiro e exibi-lo:
-#include <stdio.h>
 ```
+#include <stdio.h>
 int main() {
     int num; // Declaração da variável para armazenar o dado [14]
 
@@ -229,9 +229,10 @@ int main() {
 }
 ```
 Observações importantes:
-Múltiplas entradas: É possível ler vários valores em um único comando, como scanf("%d %d", &a, &b).
-Limitação do %s: Ao ler strings com %s, a função para de ler no primeiro espaço em branco (espaço, tabulação ou nova linha).
-Caractere %c: Diferente de outros formatos, o %c captura "caracteres brancos" (como o Enter de uma leitura anterior). Para evitar isso, costuma-se colocar um espaço antes do formato: scanf(" %c", &letra).
+- Múltiplas entradas: É possível ler vários valores em um único comando, como `scanf("%d %d", &a, &b)`.
+- Limitação do `%s`: Ao ler strings com `%s`, a função para de ler no primeiro espaço em branco (espaço, tabulação ou nova linha).
+- Caractere `%c`: Diferente de outros formatos, o `%c` captura "caracteres brancos" (como o Enter de uma leitura anterior). Para evitar isso, costuma-se colocar um espaço antes do formato: `scanf(" %c", &letra)`.
+
 ---
 
 ## Programas Compostos por Funções

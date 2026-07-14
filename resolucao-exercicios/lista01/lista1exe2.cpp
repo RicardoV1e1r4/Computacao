@@ -27,7 +27,8 @@ int main(){
 }
 
 float calculaMedia(float num1, float num2){
-	float media = (num1 + num2)/2;
+	float media;
+	media = (num1 + num2)/2;
 	
 	return media;
 }

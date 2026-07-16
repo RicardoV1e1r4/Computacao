@@ -39,7 +39,8 @@ void calcula_media(int num1, int num2, int num3){		// Item (b)
 	
 	soma = calcula_soma(num1, num2, num3);
 	
-	media = soma/3;
+	//media = soma/3;
+	media = (float)(soma/3);
 	
 	printf("\nSoma dos numeros: %d + %d + %d = %d", num1, num2, num3, soma);
 	

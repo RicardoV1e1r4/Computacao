@@ -47,3 +47,4 @@ void calcula_media(int soma){		// Item (b)
 	
 	printf("\nMedia dos numeros e igual %f", media);
 }
+

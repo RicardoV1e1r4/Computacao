@@ -12,7 +12,7 @@ int calcula_soma(int num1, int num2, int num3);		// Item (a)
 void calcula_media(int num1, int num2, int num3);		// Item (b)
 
 int main(){
-	int n1, n2, n3;
+	int n1, n2, n3, soma;
 	
 	printf("\nDigite tres numeros para calcular a sua soma e media");
 	printf("\nDigite o primeiro numero:");
@@ -24,7 +24,10 @@ int main(){
 	printf("\nDigite o terceiro numero:");
 	scanf("%d", &n3);
 	
+	soma = calcula_soma(n1, n2, n3);
 	calcula_media(n1, n2, n3);
+	
+	printf("\nSoma dos numeros: %d + %d + %d = %d", n1, n2, n3, soma);
 	
 	return 0;
 }
@@ -41,8 +44,6 @@ void calcula_media(int num1, int num2, int num3){		// Item (b)
 	
 	//media = soma/3;
 	media = (float)(soma/3);
-	
-	printf("\nSoma dos numeros: %d + %d + %d = %d", num1, num2, num3, soma);
 	
 	printf("\nMedia dos numeros: %d + %d + %d = %f", num1, num2, num3, media);
 }

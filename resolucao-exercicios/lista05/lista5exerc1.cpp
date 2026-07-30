@@ -59,3 +59,4 @@ float processaDados(int qtd_downloads, float preco){
 	printf("\nValor total a ser pago %.2f\n", soma_valores);
 	return soma_valores;
 }
+
